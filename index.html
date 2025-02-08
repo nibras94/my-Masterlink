@@ -1,11 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl" oncontextmenu="return false">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Test Page</title>
+    <title>Masterlink - ماستر لينك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Hello, GitHub Pages!</h1>
+<body oncopy="return false" oncut="return false" onselectstart="return false">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Masterlink</div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- القسم الرئيسي -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Masterlink</h1>
+                <h2 class="subtitle">الوكيل لخدمات عراق سيل للانترنت الضوئي<br></h2>
+                <p>نقدم لكم أفضل خدمات الإنترنت والترفيه في كربلاء</p>
+                <div class="hero-buttons">
+                    <a href="#home" class="cta-button">الرئيسية</a>
+                    <a href="#services" class="cta-button">الترفيه</a>
+                    <a href="#packages" class="cta-button">الباقات</a>
+                    <a href="#contact" class="cta-button">اتصل بنا</a>
+                </div>
+                
+                <!-- قسم تحميل التطبيق -->
+                <div class="app-download">
+                    <h3>حمل تطبيق سينما بوكس الآن</h3>
+                    <div class="store-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=co.albox.cinema" class="store-button" target="_blank">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-text">
+                                <span>متوفر على</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/cinema-box-%D8%B3%D9%8A%D9%86%D9%85%D8%A7-%D8%A8%D9%88%D9%83%D8%B3/id1530506555" class="store-button" target="_blank">
+                            <i class="fab fa-app-store-ios"></i>
+                            <div class="store-text">
+                                <span>متوفر على</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الخدمات -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">الترفيه</h2>
+                <div class="services-grid">
+                    <div class="service-card" onclick="openChannel('https://share.albox.co/')">
+                        <div class="service-icon">
+                            <i class="fas fa-share-nodes"></i>
+                        </div>
+                        <h3>Share</h3>
+                        <p>مشاركة الملفات</p>
+                    </div>
+                    <div class="service-card" onclick="openChannel('https://cinema.albox.co/')">
+                        <div class="service-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3>مشاهدة الأفلام</h3>
+                        <p>أحدث الأفلام والمسلسلات</p>
+                    </div>
+                    <div class="service-card" onclick="openChannel('https://tvhub.tv/')">
+                        <div class="service-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3>القنوات الرياضية</h3>
+                        <p>بث مباشر للمباريات</p>
+                    </div>
+                </div>
+
+                <!-- قسم عرض المحتوى -->
+                <div id="service-content" class="service-content-modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeServiceContent()">&times;</span>
+                        <div id="share-content" class="content-section">
+                            <h2>مشاركة الملفات</h2>
+                            <div class="share-features">
+                                <div class="feature">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <h3>رفع الملفات</h3>
+                                    <p>قم برفع ملفاتك بسهولة وأمان</p>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-cloud-download-alt"></i>
+                                    <h3>تحميل الملفات</h3>
+                                    <p>تحميل سريع وآمن لملفاتك</p>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-share-alt"></i>
+                                    <h3>مشاركة سريعة</h3>
+                                    <p>شارك ملفاتك مع العائلة والأصدقاء</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movies-content" class="content-section">
+                            <h2>مشاهدة الأفلام</h2>
+                            <div class="movie-categories">
+                                <div class="category">
+                                    <i class="fas fa-fire"></i>
+                                    <h3>أفلام جديدة</h3>
+                                    <p>أحدث الأفلام العالمية</p>
+                                </div>
+                                <div class="category">
+                                    <i class="fas fa-tv"></i>
+                                    <h3>مسلسلات</h3>
+                                    <p>مسلسلات عربية وأجنبية</p>
+                                </div>
+                                <div class="category">
+                                    <i class="fas fa-child"></i>
+                                    <h3>أفلام أطفال</h3>
+                                    <p>محتوى آمن للأطفال</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sports-content" class="content-section">
+                            <h2>القنوات الرياضية</h2>
+                            <div class="sports-channels">
+                                <div class="channel" onclick="openChannel('https://tvhub.tv/beinsports')">
+                                    <i class="fas fa-futbol"></i>
+                                    <h3>beIN SPORTS</h3>
+                                    <p>قنوات بين سبورت الرياضية</p>
+                                </div>
+                                <div class="channel" onclick="openChannel('https://tvhub.tv/ssc')">
+                                    <i class="fas fa-trophy"></i>
+                                    <h3>SSC</h3>
+                                    <p>قنوات SSC الرياضية</p>
+                                </div>
+                                <div class="channel" onclick="openChannel('https://tvhub.tv/adsports')">
+                                    <i class="fas fa-basketball-ball"></i>
+                                    <h3>AD SPORTS</h3>
+                                    <p>قنوات أبوظبي الرياضية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الباقات -->
+        <section id="packages" class="packages">
+            <div class="container">
+                <h2 class="section-title">باقاتنا</h2>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-header">Bronze</div>
+                        <div class="speed">40 ميكا</div>
+                        <div class="price">30 ألف دينار</div>
+                        <a href="#contact" class="package-button">اشترك الآن</a>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-header">Silver</div>
+                        <div class="speed">70 ميكا</div>
+                        <div class="price">40 ألف دينار</div>
+                        <a href="#contact" class="package-button">اشترك الآن</a>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-header">Gold</div>
+                        <div class="speed">110 ميكا</div>
+                        <div class="price">50 ألف دينار</div>
+                        <a href="#contact" class="package-button">اشترك الآن</a>
+                    </div>
+                    <div class="package-card featured">
+                        <div class="package-header">Platinum</div>
+                        <div class="speed">170 ميكا</div>
+                        <div class="price">65 ألف دينار</div>
+                        <a href="#contact" class="package-button">اشترك الآن</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الاتصال -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">فروعنا</h2>
+                <div class="branches">
+                    <div class="branch-card">
+                        <h3>الفرع الأول</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> كربلاء حي النقيب - مقابل جامع النقيب</p>
+                        <p><i class="fas fa-phone"></i> 0772371617</p>
+                        <p><i class="fas fa-phone"></i> 07809182818</p>
+                    </div>
+                    <div class="branch-card">
+                        <h3>الفرع الثاني</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> كربلاء - حي الموظفين - قرب مدرسة جمانه</p>
+                        <p><i class="fas fa-phone"></i> 07738000126</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة 2025 Masterlink</p>
+        </div>
+    </footer>
+
+    <!-- زر الصعود للأعلى -->
+    <button id="scroll-top" class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+        <span>الصعود للأعلى</span>
+    </button>
+
+    <script>
+        // منع فتح صفحة فحص العناصر
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+                (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+                (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // منع النقر بزر الماوس الأيمن
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // منع النسخ واللصق
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // منع السحب والإفلات
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // التمرير السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // زر الصعود للأعلى
+        const scrollTopButton = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // إضافة كود العرض التفاعلي
+        function showServiceContent(service) {
+            const modal = document.getElementById('service-content');
+            const allContent = document.querySelectorAll('.content-section');
+            
+            // إخفاء جميع المحتويات
+            allContent.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // إظهار المحتوى المطلوب
+            const selectedContent = document.getElementById(`${service}-content`);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+            
+            // إظهار النافذة المنبثقة
+            modal.style.display = 'flex';
+            
+            // تحريك الصفحة بسلاسة إلى النافذة المنبثقة
+            modal.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeServiceContent() {
+            const modal = document.getElementById('service-content');
+            modal.style.display = 'none';
+        }
+
+        // إغلاق النافذة عند النقر خارجها
+        window.onclick = function(event) {
+            const modal = document.getElementById('service-content');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // دالة فتح القناة في نافذة جديدة
+        function openChannel(channelUrl) {
+            window.open(channelUrl, '_blank', 'noopener,noreferrer');
+        }
+    </script>
 </body>
 </html>
