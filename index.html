@@ -223,9 +223,15 @@
         <span>الصعود للأعلى</span>
     </button>
 
+    <!-- السكربت لتفعيل الروابط -->
     <script>
-        // جميع الأكواد البرمجية كما هي، لم يتم تغييرها
-        // ...
+        function openChannel(url) {
+            window.open(url, '_blank');
+        }
+
+        function closeServiceContent() {
+            document.getElementById("service-content").style.display = "none";
+        }
     </script>
 </body>
 </html>
